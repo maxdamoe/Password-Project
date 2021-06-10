@@ -14,12 +14,13 @@ function promptlength() {
 
   
   
-  // Password generating for-loop
+  // Password generating for-loop, for numbers
 
-  
+  var s = ""
+
   for ( var i = 0; i < passwordLength; i++){
     
-    console.log(Math.floor(Math.random() * brown.length))
+    window.alert(s +=(Math.floor(Math.random() * brown.length)))
     
     
     //if (brown = [yes, yes, yes, yes]) { 
