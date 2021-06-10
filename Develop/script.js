@@ -1,145 +1,52 @@
-// Assignment code here
+var s = ""
+var lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz"
+  var upperCaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var numeros = "1234567890"
+  var specChars = "!#$%&*+-/:@?="
+
+  
+
 
 
 
 function promptlength() {
 
-  var s = ""
 
-  passwordLength = window.prompt("How long would you like your password to be? please insert a whole number between 8 and 128")
-  lowercase = window.prompt("Would you like to include lowercase letters in your password? Please insert yes or no")
-  uppercase = window.prompt("Would you like to include uppercase letters in your password? Please insert yes or no")
-  numeric = window.prompt("Would you like to include numeric charactes in your password? Please insert yes or no")
-  specialCharacters = window.prompt("Would you like to include special characters in your password? Please insert yes or no")
+  var passwordLength = window.prompt("How long would you like your password to be? please insert a whole number between 8 and 128")
 
-  
-  var results = [lowercase, uppercase, numeric, specialCharacters]
+  if (passwordLength !== "brown") {
+    var nut = window.prompt("Would you like to add lowercase letters to your password? Please insert yes or DONE to exit")
+      if (nut == "yes"){
+        var uppercase = window.prompt("Would you like to add uppercase letters to your password? Please insert yes to continue or DONE to recieve your password")
+          if (uppercase == "DONE") {
+            lowerCaseOnly()
+          }
+          if (uppercase == "yes"){
+            var numeric = window.prompt("Would you like to add numbers to your password? Please insert yes to continue or DONE to recieve your password")
+            if (numeric == "DONE"){
+              upperCaseOnly()
+            }
+            if (numeric == "yes"){
+              var specialCharacters = window.prompt("Would you like to add special characters to your password? Please insert yes to include them in your password or DONE to recieve your password")
+              if (specialCharacters == "DONE"){
+                numericOnly()
+              }
+              if (specialCharacters == "yes"){
+                specialCharactersOnly()
+              }
 
-  
-  // correct for no lowercase, no uppercase, yes numeric, no special characters
-  
-  if (results = ["no", "no", "yes", "no"]) {
-
-  for ( var i = 0; i < passwordLength; i++){
-    
-    window.alert(s +=(Math.floor(Math.random() * passwordLength)))
-  }
-}
-  
-  
-
-
-
-
-
-
-
-
+            }
+          }
+      }
 
   
-  //function next(length){
-    
-   //poop = window.prompt("Include lowercase characters? type yes or no.")
-
-    //if (poop === yes) {
-      //function continuation(poop){
-        //poop = window.prompt("Include uppercase characters? type yes or no.")
-        
-
-     //}
-
-    //if (poop === no)
-     
-   //}
-
-  //}
-
-//next()
-
-
-
-
-}
+  }}
  
-
-
-
-
-
-// Get references to the #generate element
+  
+  
+  
+  
+  
 var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
- 
-
-
-}
-
 generateBtn.addEventListener("click", promptlength);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function length(){
-// var length = window.prompt("How long would you like your password to be? please insert a whole number between 8 and 128")
-
-
-
-
-
-
-function promptsecondpart(){
-  var passwordDetails = window.prompt("what characters would you like to add in your password? Enter 1 for Letters only, 2 to include Numbers, and 3 to include special characters")
- 
-  if (passwordDetails === "1") {
-    //insert function to generate password with random letters
-        //then insert function to carry us to ask about length inside generating function
-  }
-  if(passwordDetails ==="2") {
-    //insert function to generate password with random letters and numbers
-      //then insert function to carry us to ask about length inside generating function
-
-  } 
-  if (passwordDetails === "3"){
-    //insert function to generate password with random letters, numbers, and special characters
-        //then insert function to carry us to ask about length inside generating function
-  }
-}
-
-
-
-
-
-
-// Add event listener to generate button
-
- 
-
-
-
-
-//WHEN I click the button to generate a password THEN I am presented with a series of prompts for password
