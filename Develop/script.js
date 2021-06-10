@@ -4,31 +4,27 @@
 
 function promptlength() {
 
+  var s = ""
+
   passwordLength = window.prompt("How long would you like your password to be? please insert a whole number between 8 and 128")
   lowercase = window.prompt("Would you like to include lowercase letters in your password? Please insert yes or no")
   uppercase = window.prompt("Would you like to include uppercase letters in your password? Please insert yes or no")
   numeric = window.prompt("Would you like to include numeric charactes in your password? Please insert yes or no")
   specialCharacters = window.prompt("Would you like to include special characters in your password? Please insert yes or no")
 
-  var brown = [lowercase, uppercase, numeric, specialCharacters]
+  
+  var results = [lowercase, uppercase, numeric, specialCharacters]
 
   
+  // correct for no lowercase, no uppercase, yes numeric, no special characters
   
-  // Password generating for-loop, for numbers
-
-  var s = ""
+  if (results = ["no", "no", "yes", "no"]) {
 
   for ( var i = 0; i < passwordLength; i++){
     
-    window.alert(s +=(Math.floor(Math.random() * brown.length)))
-    
-    
-    //if (brown = [yes, yes, yes, yes]) { 
-      //window.alert(brown[Math.floor(math.random() * brown.length)])
-    //}
-
-
+    window.alert(s +=(Math.floor(Math.random() * passwordLength)))
   }
+}
   
   
 
