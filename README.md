@@ -4,4 +4,4 @@ Description: This is my password project. It allows you to generate a random pas
 
 ![image](./images/screencap.png)
 
-[Link to deployed app]()
+[Link to deployed app](https://maxdamoe.github.io/Password-Project/index.html)
